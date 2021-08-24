@@ -26,8 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'motor',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -144,8 +144,6 @@ if DEBUG is False:
 
     ALLOWED_HOSTS = ['http://34.94.114.166:8001']
 
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -161,3 +159,10 @@ if DEBUG is False:
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'edgarfranciscos@gmail.com'
+EMAIL_HOST_PASSWORD = 'wftncpjvrehuffkr'
+EMAIL_USE_TLS = True

@@ -5,6 +5,9 @@ from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
+from django.template.loader import get_template
+from django.core.mail import EmailMultiAlternatives
+from django.conf import settings
 from .models import Product
 from .forms import UserModelForm, ProductModelForm
 
@@ -12,6 +15,10 @@ from .forms import UserModelForm, ProductModelForm
 class HomeView(generic.ListView):
     template_name = 'index.html'
     queryset = Product.objects.all()
+
+
+class ApiInfo(generic.TemplateView):
+    template_name = 'api_info.html'
 
 
 class UserView(generic.ListView):
@@ -69,6 +76,31 @@ class ProductEdit(generic.UpdateView):
         id_ = self.kwargs.get("pk")
         return get_object_or_404(Product, id=id_)
 
+    def form_valid(self, form):
+        user_name = self.request.user.username
+        remitente = []
+        users = User.objects.all()
+        for user in users:
+            remitente.append(user.email)
+        print(remitente)
+        product = Product.objects.get(pk=self.kwargs.get("pk"))
+        print(product)
+        context = {'name_prod': product.name, 'edit_time': product.updated, 'user_edit': user_name}
+        print(context)
+        template = get_template('email.html')
+        content = template.render(context)
+        email = EmailMultiAlternatives(
+            'Product Modified',
+            'Admin Modified Product',
+            settings.EMAIL_HOST_USER,
+            remitente
+        )
+
+        email.attach_alternative(content, 'text/html')
+        print('send mail')
+        email.send()
+        return super(ProductEdit, self).form_valid(form)
+
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(ProductEdit, self).dispatch(*args, **kwargs)
@@ -115,3 +147,4 @@ class ProductDelete(generic.DeleteView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(ProductDelete, self).dispatch(*args, **kwargs)
+

@@ -1,0 +1,96 @@
+{% extends 'modulo.html' %}
+{% load static %}
+
+{% block css %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <!-- NProgress -->
+    <link rel="stylesheet" href="{% static 'vendors/nprogress/nprogress.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>API <small>Info</small></h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>API <small>ZeBrands</small></h2>
+                            <ul class="nav navbar-right">
+                                <a class="btn btn-danger" href="{% url 'home' %}">Back</a>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="get-tab" data-toggle="tab" href="#get"
+                                       role="tab" aria-controls="get" aria-selected="true">GET</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="post-tab" data-toggle="tab" href="#post"
+                                       role="tab" aria-controls="post" aria-selected="false">POST</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="put-tab" data-toggle="tab" href="#put"
+                                       role="tab" aria-controls="put" aria-selected="false">PUT</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="get" role="tabpanel" aria-labelledby="get-tab">
+                                    <p>
+                                        You can use API REST to consume the public information.
+                                    </p>
+                                    <h1>All Records</h1>
+                                    <p>
+                                        To use this API you can do a GET REST like this example:
+                                        <br>
+                                        "http://mypage/api_product"
+                                        <br>
+                                        Method = GET
+                                    </p>
+                                    <h1>Specific Record</h1>
+                                    <p>
+                                        To use this API you can do a GET REST like this example:
+                                        <br>
+                                        "http://mypage/api_detailes/id"
+                                        <br>
+                                        Method = GET
+                                    </p>
+                                </div>
+                                 <div class="tab-pane fade show active" id="post" role="tabpanel" aria-labelledby="post-tab">
+                                    In Process.
+                                </div>
+                                 <div class="tab-pane fade show active" id="put" role="tabpanel" aria-labelledby="put-tab">
+                                    In Process.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <!-- FastClick -->
+    <script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+    <!-- NProgress -->
+    <script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+{% endblock %}

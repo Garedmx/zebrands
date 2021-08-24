@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
 from motor import views
+from api import api
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
@@ -33,6 +34,12 @@ urlpatterns = [
     path('delete_user/<int:pk>', views.UserDelete.as_view(), name='delete_user'),
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
+
+    path('api_info/', views.ApiInfo.as_view(), name='api_info'),
+    path('api_products/', api.product_list, name='api_products'),
+    path('api_detailes/<int:pk>', api.product_detail, name='api_detailes'),
+
+
 ]
 
 if settings.DEBUG:
