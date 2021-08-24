@@ -1,0 +1,41 @@
+{% extends 'principal.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block modulo %}
+    <div class="container">
+        <div id="login-box" style="margin-top: 120px;">
+            <form method="post">
+                {% csrf_token %}
+                <div class="logo">
+                    <img src="{% static 'img/logo_largo.png' %}" class="img-circle profile_img">
+                    <!-- <h1 class="" ><span class="tweak">L</span>ogin</h1>-->
+                </div><!-- /.logo -->
+
+                <div class="controls">
+                    <input type="text" name="username" required="required" placeholder="Username" class="form-control"/>
+                    <input type="password" name="password" required="required" placeholder="Password"
+                           class="form-control"/>
+                    <br>
+
+                    <button type="submit" class="btn btn-default btn-block btn-custom">LogIn</button>
+                    <a class="btn btn-danger btn-block btn-custom" href="{% url 'home' %}">Back</a>
+                </div><!-- /.controls -->
+            </form>
+        </div><!-- /#login-box -->
+
+    </div><!-- /.container -->
+    <div id="particles-js"></div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/login.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'modulo.html' %}
+{% load static %}
+
+{% block css %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <!-- NProgress -->
+    <link rel="stylesheet" href="{% static 'vendors/nprogress/nprogress.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>User <small>add</small></h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>New User <small></small></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {% for field in form.visible_fields %}
+                                        <div class="form-group">
+                                            <label for="{{ field.label }}">{{ field.label }}:</label>
+                                            {{ field }}
+                                        </div>
+                                    {% endfor %}
+                                    <button type="submit" class="btn btn-success">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <!-- FastClick -->
+    <script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+    <!-- NProgress -->
+    <script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+{% endblock %}

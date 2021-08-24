@@ -17,7 +17,7 @@
             <div class="profile_info">
                 <span>Welcome</span>
                 {% if request.user.is_authenticated %}
-                    <h2>{{ name }}</h2>
+                    <h2>{{ request.user.username }}</h2>
                 {% else %}
                     <h2>Guest</h2>
                 {% endif %}
@@ -34,8 +34,8 @@
                         <li>
                             <a><i class="fa fa-calendar"></i> Menu <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
-                                <li><a href="{{ list_product }}"> Products </a></li>
-                                <li><a href="{{ list_admin }}"> Admin </a></li>
+                                <li class="active"><a href="{% url 'home' %}"> Products </a></li>
+                                <li><a href="{% url 'users' %}"> Users </a></li>
                             </ul>
                         </li>
                     {% endif %}
@@ -56,11 +56,11 @@
                 <span class="glyphicon " aria-hidden="true"></span>
             </a>
             {% if request.user.is_authenticated %}
-                <a data-toggle="tooltip" data-placement="top" title="LogOut">
+                <a data-toggle="tooltip" data-placement="top" title="LogOut"  href="{% url 'logout' %}">
                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                 </a>
             {% else %}
-                   <a data-toggle="tooltip" data-placement="top" title="LogIn">
+                   <a data-toggle="tooltip" data-placement="top" title="LogIn" href="{% url 'login' %}">
                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                 </a>
             {% endif %}
