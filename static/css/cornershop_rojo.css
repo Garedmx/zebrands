@@ -1,0 +1,396 @@
+.left_col {
+  background:  #ffffff; }
+
+.container {
+  width: 100%;
+  padding: 0;
+  max-width: 100%;
+  background:  #ffffff;
+}
+
+
+.body {
+    color: #73879C;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+   
+}
+
+/* color letras del menu */
+
+.nav.side-menu>li>a,
+.nav.child_menu>li>a {
+    color: #404040;
+    font-weight: 500
+}
+
+.nav.side-menu>li>a:hover {
+    color: #ff0026; !important
+    color: #ffff;    
+}
+
+
+/* color de fondo body  */
+.body .container.body .right_col {
+    background: #ffffff;
+}
+
+.nav-sm .container.body .col-md-3.left_col {
+  min-height: 100%;
+  width: 70px;
+  padding: 0;
+  z-index: 9999;
+  position: absolute; 
+}
+
+.nav-sm .container.body .col-md-3.left_col.menu_fixed {
+  position: fixed;
+  height: 100%; }
+
+.nav-md .container.body .col-md-3.left_col {
+   min-height: 100%;
+  width: 230px;
+  padding: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1; }
+
+/* background:#1F2547 profile #106D9A */
+
+.profile{
+    background:linear-gradient(#ff667d,#ff0026),#ff0026;
+    
+}
+
+.profile_info{
+    padding:25px 10px 10px;
+    width:65%;
+    float:left
+}
+.profile_info span{
+    font-size:16px;
+    line-height:50px;
+    color:#fff
+}
+.profile_info h2{
+    font-size:20px;
+    color:#bab8b8;
+    margin:0;
+    font-weight:300
+}
+
+/* background y largo del menu */
+.left_col{
+    background: #ffffff;
+}
+
+.nav_title {
+    width: 230px;
+    float: left;
+    background: rgb(255, 255, 255);
+    border-radius: 0;
+    height: 80px
+}
+
+
+
+
+/* color de fondo de menu superior*/
+
+.top_nav .navbar-right {
+    margin: 0;
+    width: 70%;
+    height: 80px;
+    float: right;
+    background: #ffffff
+    
+        
+}
+
+.nav.child_menu>li>a {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 12px;
+    padding: 9px
+}
+
+.nav_menu {
+    float: left;
+    background: #ffffff;
+    border-bottom: 1px solid #D9DEE4;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    color: #ff3300;
+}
+
+/* color de fondo de menu*/
+
+.nav li.current-page{
+    background:#FFFFFF;
+}
+
+/* seleccion de menu */
+
+.nav.side-menu>li.active>a{
+    color: #ffff;
+    text-shadow:rgba(0,0,0,.25) 0 -1px 0;
+    background:linear-gradient(#ff0026,#ff0026),#323232;
+    box-shadow:rgba(0,0,0,.25) 0 1px 0,inset rgba(255,255,255,.16) 0 1px 0
+}
+   
+/* barras indicadoras del menu */
+    
+.nav.side-menu>li.active,.nav.side-menu>li.current-page{
+    border-right:5px solid #ff0026
+}
+.nav-sm .nav.child_menu li.active,.nav-sm .nav.side-menu li.active-sm{
+    border-right:5px solid #ff0026
+}
+
+/* menu desplegable minimizado */
+
+.nav-sm ul.nav.child_menu{
+    left:100%;
+    color: #ff3300;
+    position:absolute;
+    top:0;width:210px;
+    z-index:4000;
+    background:#ff0026;
+    display:none
+}
+.nav-sm ul.nav.child_menu li a{
+    color: #1F2547;
+    text-align:left!important
+}
+
+.nav-md ul.nav.child_menu li:before{
+    background:#ff0026;
+    color: #ff3300;
+    bottom:auto;
+    content:"";
+    height:8px;
+    left:23px;
+    margin-top:15px;
+    position:absolute;
+    right:auto;
+    width:8px;
+    z-index:1;
+    border-radius:50%
+}
+
+.nav-md ul.nav.child_menu li:after{
+    border-left:1px solid #D52427;
+    bottom:0;
+    content:"";
+    left:27px;
+    position:absolute;
+    top:0
+}
+
+/* footer barra izquierda */
+
+.sidebar-footer a{
+    padding:7px 0 3px;
+    text-align:center;
+    width:25%;
+    font-size:17px;
+    display:block;
+    float:left;
+    background:linear-gradient(#ff0026,#ff0026),#323232;
+    cursor:pointer
+}
+
+.sidebar-footer a:hover{
+    background:#ffff
+}
+
+.sidebar-footer{
+    bottom:0;
+    clear:both;
+    display:block;
+    padding:5px 0 0;
+    position:fixed;
+    width:230px;
+    background:#4d000b;
+    z-index:999
+}
+
+.bg-evercon {
+    background: #1F2547 !important;
+    border: 1px solid #1F2547 !important;
+    color: #fff
+}
+.border-ever {
+  border-style: solid;
+  border-color: red;
+}
+
+
+/* boton  */
+
+.btn-primary{
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    border-color: #0066cc
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #0066cc;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-primary{
+    color: #000
+}
+
+.btn-info{
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    border-color: #0088cc
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+    background: #0088cc;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-info{
+    color: #000
+}
+
+a.btn-danger{
+    color: #000
+}
+
+.btn-danger{
+    background: #fff;
+    color: #000;
+    border-radius: 3px
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-primary {
+    background: #a04020;
+    border: 1px solid #a04020;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-success,
+a.btn-primary,
+a.btn-warning,
+a.btn-danger {
+    color: #000
+    
+    
+}
+
+.btn-success {
+    background: #fff;
+    border: 1px solid #159d82;
+    color: #000
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+    
+    background: #159d82;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+
+}
+.boxs{
+    border: 1px solid #cc3300;
+    box-shadow : -2px 6px 6px 4px rgba(0,0,0,0.40)
+}
+
+.boxa{
+    border: 0px solid #808080;
+    box-shadow : -1px 2px 0px 0px rgba(0,0,0,0.10)
+}
+
+
+/* iconos  */
+a:hover{
+    color: #a04020
+}
+
+.iconc{
+    color: #D52427
+}
+
+/* colors  
+
+
+.purple{color:#9B59B6}
+
+.aero{color:#9CC2CB}
+
+.dark{color:#34495E}
+
+.bg-green {
+    background: #1ABB9C !important;
+    border: 1px solid #1ABB9C !important;
+    color: #fff
+}
+
+*/
+.red{color:#a04020}
+.blue{color:#34495e}
+.yellow{color:#dab625}
+.green{color:#159d82}
+.awaiting{color:#66ccff}
+
+
+.bg-red1 {
+    background: #ffffff !important;
+    border: 1px solid #a04020 !important;
+    color: #a04020
+}
+
+.accordion .panel-title {
+    color: red;
+}
+
+.byline {
+    color: #000000;
+}
+
+.timeline h2.title {
+    color: red;
+}
+
+.timeline h2.title:before {
+    color: red;
+}
+
+.timeline_title_red {
+    color: red;
+}
+
+.timeline_title_gray {
+    color: gray;
+}
+
+.panel-title_red{
+    color: red;
+}
+
+.panel-title_grey{
+    color: grey;
+}

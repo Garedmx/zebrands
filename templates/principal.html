@@ -1,0 +1,53 @@
+{%  load static %}
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
+        <title>ZeBrands - Ecom</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+        <!-- PNotify -->
+        <link rel="stylesheet" href="{% static 'vendors/pnotify/dist/pnotify.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/pnotify/dist/pnotify.buttons.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/pnotify/dist/pnotify.nonblock.css' %}">
+
+        {%block css%}
+
+        {%endblock%}
+
+        <!-- Custom Theme Style -->
+        <link rel="stylesheet" href="{% static 'css/custom_rojo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cornershop_rojo.css' %}">
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                {% block modulo %}
+
+                {% endblock %}
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+
+        <!-- Bootstrap -->
+        <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+        <!-- PNotify -->
+        <script src="{% static 'vendors/pnotify/dist/pnotify.js' %}"></script>
+        <script src="{% static 'vendors/pnotify/dist/pnotify.buttons.js' %}"></script>
+        <script src="{% static 'vendors/pnotify/dist/pnotify.nonblock.js' %}"></script>
+
+        {%block js%}
+
+        {%endblock%}
+
+        <!-- Custom Theme Scripts -->
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>

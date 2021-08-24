@@ -1,0 +1,261 @@
+/* profile*/
+
+.profile{
+    background:#e68a00 /*#D52427*/
+}
+
+.profile_info{
+    padding:25px 10px 10px;
+    width:65%;
+    float:left
+}
+.profile_info span{
+    font-size:16px;
+    line-height:30px;
+    color:#fff
+}
+.profile_info h2{
+    font-size:15px;
+    color:#bab8b8;
+    margin:0;
+    font-weight:300
+}
+
+.left_col{
+    background: #656566
+}
+
+/* color de fondo de menu*/
+
+.nav_title {
+    width: 230px;
+    float: left;
+    background: rgb(101, 101, 102);
+    border-radius: 0;
+    height: 57px
+}
+
+/*.left_col {
+    background: 
+}*/
+
+.nav li.current-page{
+    background:#656566
+}
+
+/* seleccion de menu */
+
+.nav.side-menu>li.active>a{
+    text-shadow:rgba(0,0,0,.25) 0 -1px 0;
+    background:linear-gradient(#828282,#545454),#323232;
+    box-shadow:rgba(0,0,0,.25) 0 1px 0,inset rgba(255,255,255,.16) 0 1px 0
+}
+   
+/* barras indicadoras del menu */
+    
+.nav.side-menu>li.active,.nav.side-menu>li.current-page{
+    border-right:5px solid #e68a00
+}
+.nav-sm .nav.child_menu li.active,.nav-sm .nav.side-menu li.active-sm{
+    border-right:5px solid #e68a00
+}
+
+/* menu desplegable minimizado */
+
+.nav-sm ul.nav.child_menu{
+    left:100%;
+    position:absolute;
+    top:0;width:210px;
+    z-index:4000;
+    background:#D9DEE4;
+    display:none
+}
+.nav-sm ul.nav.child_menu li a{
+    color: #000;
+    text-align:left!important
+}
+
+.nav-md ul.nav.child_menu li:before{
+    background:#e68a00;
+    bottom:auto;
+    content:"";
+    height:8px;
+    left:23px;
+    margin-top:15px;
+    position:absolute;
+    right:auto;
+    width:8px;
+    z-index:1;
+    border-radius:50%
+}
+
+.nav-md ul.nav.child_menu li:after{
+    border-left:1px solid #e68a00;
+    bottom:0;
+    content:"";
+    left:27px;
+    position:absolute;
+    top:0
+}
+
+/* footer barra izquierda */
+
+.sidebar-footer a{
+    padding:7px 0 3px;
+    text-align:center;
+    width:25%;
+    font-size:17px;
+    display:block;
+    float:left;
+    background:#323232;
+    cursor:pointer
+}
+
+.sidebar-footer a:hover{
+    background:#656566
+}
+
+.sidebar-footer{
+    bottom:0;
+    clear:both;
+    display:block;
+    padding:5px 0 0;
+    position:fixed;
+    width:230px;
+    background:#e68a00;
+    z-index:999
+}
+
+/* boton  */
+
+.btn-primary{
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    border-color: #0066cc
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #0066cc;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-primary{
+    color: #000
+}
+
+.btn-info{
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    border-color: #0088cc
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+    background: #0088cc;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-info{
+    color: #000
+}
+
+a.btn-danger{
+    color: #000
+}
+
+.btn-danger{
+    background: #fff;
+    color: #000;
+    border-radius: 3px
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-primary {
+    background: #a04020;
+    border: 1px solid #a04020;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+}
+
+a.btn-success,
+a.btn-primary,
+a.btn-warning,
+a.btn-danger {
+    color: #000
+    
+    
+}
+
+.btn-success {
+    background: #fff;
+    border: 1px solid #159d82;
+    color: #000
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+    
+    background: #159d82;
+    box-shadow : -3px 5px 19px 0px rgba(0,0,0,0.55)
+
+}
+.boxs{
+    border: 1px solid #cc3300;
+    box-shadow : -2px 6px 6px 4px rgba(0,0,0,0.40)
+}
+
+.boxa{
+    border: 0px solid #808080;
+    box-shadow : -1px 2px 0px 0px rgba(0,0,0,0.10)
+}
+
+
+/* iconos  */
+a:hover{
+    color: #a04020
+}
+
+.iconc{
+    color: #e68a00
+}
+
+/* colors  
+
+
+.purple{color:#9B59B6}
+
+.aero{color:#9CC2CB}
+
+.dark{color:#34495E}
+
+.bg-green {
+    background: #1ABB9C !important;
+    border: 1px solid #1ABB9C !important;
+    color: #fff
+}
+
+*/
+.red{color:#a04020}
+.blue{color:#34495e}
+.yellow{color:#dab625}
+.green{color:#159d82}
+.awaiting{color:#66ccff}
+
+
+.bg-red1 {
+    background: #ffffff !important;
+    border: 1px solid #a04020 !important;
+    color: #a04020
+}
