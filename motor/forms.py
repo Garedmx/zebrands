@@ -62,7 +62,8 @@ class ProductModelForm(ModelForm):
             'brand',
             'description',
             'img',
-            'quantity'
+            'quantity',
+            'active'
         )
         widgets = {
             'name': TextInput(
@@ -81,6 +82,11 @@ class ProductModelForm(ModelForm):
                 }
             ),
             'description': Textarea(
+                attrs={
+                    'placeholder': 'Description'
+                }
+            ),
+            'active': CheckboxInput(
                 attrs={
                     'placeholder': 'Description'
                 }

@@ -24,7 +24,8 @@ from motor import views
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('add_product/', views.ProductAdd.as_view(), name='add_product'),
-    path('edit_product/', views.ProductEdit.as_view(), name='edit_product'),
+    path('view_product/<int:pk>', views.ProductView.as_view(), name='view_product'),
+    path('edit_product/<int:pk>', views.ProductEdit.as_view(), name='edit_product'),
     path('user/', views.UserView.as_view(), name='users'),
     path('add_user/', views.UserAdd.as_view(), name='add_user'),
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),

@@ -51,3 +51,8 @@ class ProductAdd(generic.CreateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(ProductAdd, self).dispatch(*args, **kwargs)
+
+
+class ProductView(generic.DetailView):
+    template_name = 'view_product.html'
+    queryset = Product.objects.all()
