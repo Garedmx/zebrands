@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'motor',
     'rest_framework',
     'api',
+    'django.contrib.admindocs',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +167,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'edgarfranciscos@gmail.com'
 EMAIL_HOST_PASSWORD = 'wftncpjvrehuffkr'
 EMAIL_USE_TLS = True
+

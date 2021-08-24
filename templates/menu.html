@@ -1,4 +1,4 @@
-{%  load static %}
+{% load static %}
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -49,18 +49,21 @@
             <a data-toggle="tooltip" data-placement="top" title="" href="">
                 <span class="glyphicon " aria-hidden="true"></span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="" href="">
-                <span class="glyphicon " aria-hidden="true"></span>
-            </a>
             <a data-toggle="tooltip" data-placement="top" title="API Info" href="{% url 'api_info' %}">
                 <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
             </a>
             {% if request.user.is_authenticated %}
-                <a data-toggle="tooltip" data-placement="top" title="LogOut"  href="{% url 'logout' %}">
+                <a data-toggle="tooltip" data-placement="top" title="Documentation" href="admin/doc/">
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="LogOut" href="{% url 'logout' %}">
                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                 </a>
             {% else %}
-                   <a data-toggle="tooltip" data-placement="top" title="LogIn" href="{% url 'login' %}">
+                <a data-toggle="tooltip" data-placement="top" title="" href="">
+                    <span class="glyphicon " aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="LogIn" href="{% url 'login' %}">
                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                 </a>
             {% endif %}

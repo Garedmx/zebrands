@@ -7,6 +7,7 @@ Django==3.2.6
 django-environ==0.4.5
 django-filter==2.4.0
 djangorestframework==3.12.4
+docutils==0.17.1
 docx==0.2.4
 idna==2.10
 language-tool-python==2.5.4

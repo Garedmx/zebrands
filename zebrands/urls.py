@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
@@ -39,7 +39,8 @@ urlpatterns = [
     path('api_products/', api.product_list, name='api_products'),
     path('api_detailes/<int:pk>', api.product_detail, name='api_detailes'),
 
-
+    path('admin/doc/', include('django.contrib.admindocs.urls')),
+    path('admin/', admin.site.urls)
 ]
 
 if settings.DEBUG:
